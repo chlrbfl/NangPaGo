@@ -3,7 +3,14 @@ package com.mars.NangPaGo.domain.recipe.entity;
 import com.mars.NangPaGo.common.jpa.BaseEntity;
 import jakarta.persistence.*;
 import java.util.List;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 
+@Getter
+@Table(name = "recipe")
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 public class Recipe extends BaseEntity {
 

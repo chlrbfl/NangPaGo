@@ -3,8 +3,6 @@ package com.mars.NangPaGo.domain.recipe.dto;
 import com.mars.NangPaGo.common.jpa.BaseEntity;
 import com.mars.NangPaGo.domain.recipe.entity.Manual;
 import com.mars.NangPaGo.domain.recipe.entity.ManualImage;
-import com.mars.NangPaGo.domain.recipe.entity.Recipe;
-import com.mars.NangPaGo.domain.user.entity.User;
 import java.time.LocalDateTime;
 import java.util.List;
 import lombok.AllArgsConstructor;
@@ -30,7 +28,4 @@ public class RecipeResponseDto extends BaseEntity {
     private List<ManualImage> manualImages;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
-
-    // private String material; // 재료 이름
-    // private String quantity; // 수량
 }
