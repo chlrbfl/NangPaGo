@@ -5,5 +5,5 @@ import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface RecipeRepository extends JpaRepository<Recipe, Long> {
-    Optional<Recipe> findByRecipeId(Long recipeId);
+    Optional<Recipe> findByRecipeId(Long id);
 }

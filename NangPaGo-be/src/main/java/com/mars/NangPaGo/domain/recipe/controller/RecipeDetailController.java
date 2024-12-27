@@ -16,7 +16,7 @@ public class RecipeDetailController {
     @Autowired
     private RecipeDetailService recipeDetailService;
 
-    // 레시피 상세 조회
+    // 레시피 상세정보 조회
     @GetMapping("/detail/{id}")
     public ResponseEntity<RecipeResponseDto> getRecipeDetail(@PathVariable Long id) {
         RecipeResponseDto responseDto = recipeDetailService.getRecipeDetails(id);

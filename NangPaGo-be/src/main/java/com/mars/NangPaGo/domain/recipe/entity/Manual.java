@@ -3,7 +3,6 @@ package com.mars.NangPaGo.domain.recipe.entity;
 import com.mars.NangPaGo.common.jpa.BaseEntity;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -21,6 +20,6 @@ public class Manual extends BaseEntity {
     private String manual;
 
     @ManyToOne
-    @JoinColumn(name = "recipe_id")
+    @JoinColumn(name = "id")
     private Recipe recipe;
 }

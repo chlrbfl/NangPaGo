@@ -20,6 +20,6 @@ public class ManualImage extends BaseEntity {
     private String imageUrl;
 
     @ManyToOne
-    @JoinColumn(name = "recipe_id")
+    @JoinColumn(name = "id")
     private Recipe recipe;
 }

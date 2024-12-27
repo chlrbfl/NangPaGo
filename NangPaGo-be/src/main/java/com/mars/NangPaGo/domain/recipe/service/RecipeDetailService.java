@@ -9,27 +9,23 @@ import com.mars.NangPaGo.domain.recipe.repository.ManualRepository;
 import com.mars.NangPaGo.domain.recipe.repository.RecipeRepository;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @RequiredArgsConstructor
 @Service
 public class RecipeDetailService {
 
-    @Autowired
     private final RecipeRepository recipeRepository;
-    @Autowired
     private final ManualRepository manualRepository;
-    @Autowired
     private final ManualImageRepository manualImageRepository;
 
-    public RecipeResponseDto getRecipeDetails(Long recipeId) {
+    public RecipeResponseDto getRecipeDetails(Long id) {
 
-        Recipe recipe = recipeRepository.findByRecipeId(recipeId)
+        Recipe recipe = recipeRepository.findByRecipeId(id)
             .orElseThrow(() -> new IllegalArgumentException("해당 레시피가 존재하지 않습니다."));
 
-        List<Manual> manuals = manualRepository.findByRecipeIdOrderById(recipeId);
-        List<ManualImage> manualImages = manualImageRepository.findByRecipeIdOrderById(recipeId);
+        List<Manual> manuals = manualRepository.findByRecipeIdOrderById(id);
+        List<ManualImage> manualImages = manualImageRepository.findByRecipeIdOrderById(id);
 
         return RecipeResponseDto.builder()
             .id(recipe.getId())
